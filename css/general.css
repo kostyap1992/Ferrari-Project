@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+.container {
+  max-width: 116rem;
+  margin: 0 auto;
+}
+
+.car-model {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: absolute;
+  bottom: 6rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.btn:link,
+.btn:visited {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  text-decoration: none;
+  color: #ddd;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  color: #d62828;
+}
+
+.secondary-heading {
+  font-size: 3.6rem;
+  color: #ddd;
+}
+
+.discover {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.car-model p {
+  font-size: 2rem;
+  color: #ddd;
+}
+
+.ring {
+  position: relative;
+}
+
+.ring-class {
+  position: relative;
+  height: 4rem;
+  width: 4rem;
+  transform: rotate(-90deg);
+}
+
+.ring-class circle {
+  fill: none;
+  stroke-width: 3;
+  stroke: #ddd;
+  transform: translate(2px, 2px);
+}
+
+.btn:hover .ring-class circle {
+  stroke: #d62828;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 0;
+  animation: animate 0.7s linear;
+}
+
+.iconify-inline {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  color: #222;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes animate {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
